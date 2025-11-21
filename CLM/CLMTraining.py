@@ -1,7 +1,3 @@
-# ============================================================
-# CLM Training.py — Enhanced LSTM + SI + FIM (adaptive λ, EMA)
-# Prints R² (eval/re-eval), Forgetting, Memory Stability; draws plots
-# ============================================================
 
 # ============================================================
 # Enhanced LSTM + SI + FIM (adaptive λ, EMA, 2-layer LSTM)
@@ -206,5 +202,6 @@ def hybrid_train(path, num_tasks=10):
     return memory_stability_r2
 
 if __name__=="__main__":
-    ms = hybrid_train("/kaggle/working/CLM/Processed Data/Africa_mpox.csv", num_tasks=10)
+    ms = hybrid_train("/kaggle/working/CLM-Project/Processed Data/Africa_mpox.csv", num_tasks=10)
     print(f"Final Memory Stability (Africa_mpox): {ms:.4f}")
+
